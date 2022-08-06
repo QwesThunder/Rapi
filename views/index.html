@@ -1,622 +1,99 @@
-__path = process.cwd()
-
-var express = require('express');
-
-// MASUKKAN/GANTI APIKEY 
-apikey = "QwesHK2005", "Z"
-// 
-
-var fetch = require('node-fetch');
-var cheerio = require('cheerio');
-var request = require('request');
-var router  = express.Router();
-nottext: {message: 'MASUKKAN TEXT' }
-notapikey: {message: 'APIKEY SALAH' }
-
-// WALLPAPER
-router.get('/wallml', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/wallpaper/wallml`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/wallrandom', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/wallpaper/wallrandom`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/wallcode', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/wallpaper/wallcode`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/wallneon', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/wallpaper/wallneon`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/wallpubg', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/wallpaper/wallpubg`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-// TEXTPRO
-router.get('/halloween', async (req, res, next) => { 
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/textpro/halloween?text=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/rainbow', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/textpro/rainbow?text=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/scfi', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/textpro/scfi?text=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/blue', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/textpro/blue?text=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/juice', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/textpro/juice?text=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/purple', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/textpro/purple?text=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/toxic', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/textpro/toxic?text=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/peridot', async (req, res, next) => { 
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' }) 
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/textpro/peridot?text=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/metal', async (req, res, next) => { 
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' }) 
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/textpro/metal?text=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/realistic', async (req, res, next) => { 
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' }) 
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/textpro/realistic?text=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/impressive', async (req, res, next) => { 
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' }) 
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/textpro/impressive?text=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/cracked', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/textpro/cracked?text=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/magma', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/textpro/magma?text=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/thunder', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/textpro/thunder?text=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/berry', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/textpro/berry?text=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/transformer', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/textpro/transformer?text=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/horror', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/textpro/horror?text=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/metallic', async (req, res, next) => { 
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' }) 
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/textpro/metallic?text=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/circuit', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/textpro/circuit?text=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/sketch', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/textpro/sketch?text=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-// RANDOM
-router.get('/jumlahangka', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/random/jumlahangka?query=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/jumlahhuruf', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/random/jumlahhuruf?query=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/besarkecil', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/random/besarkecil?query=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/resepmasakan', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/random/resepmasakan?query=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/katajago', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/random/katajago?query=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/artimimpi', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/random/artimimpi?query=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/artinama', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/random/artinama?query=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/kapital', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/random/kapital?query=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/halah', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/random/halah?query=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/huluh', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/random/huluh?query=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/heleh', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/random/heleh?query=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/bilangangka', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/random/bilangangka?query=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/balikangka', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/random/balikangka?query=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/balikhuruf', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/random/balikhuruf?query=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/wikipedia', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://myselfff.herokuapp.com/docs/random/wikipedia?query=${text}`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-// CANVAS 
-router.get('/sadcat', async (req, res, next) => {
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-var requestSettings = {
-url: `https://myselfff.herokuapp.com/docs/canvas/sadcat?text=${text}`, method: 'GET', encoding: null };
-request(requestSettings, function(error, response, body) {
-res.set('Content-Type', 'image/png');
-res.send(body)})})
-
-router.get('/facts', async (req, res, next) => {
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-var requestSettings = {
-url: `https://myselfff.herokuapp.com/docs/canvas/facts?text=${text}`, method: 'GET', encoding: null };
-request(requestSettings, function(error, response, body) {
-res.set('Content-Type', 'image/png');
-res.send(body)})})
-
-router.get('/pikachu', async (req, res, next) => {
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-var requestSettings = {
-url: `https://myselfff.herokuapp.com/docs/canvas/pikachu?text=${text}`, method: 'GET', encoding: null };
-request(requestSettings, function(error, response, body) {
-res.set('Content-Type', 'image/png');
-res.send(body)})})
-
-router.get('/biden', async (req, res, next) => {
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-var requestSettings = {
-url: `https://myselfff.herokuapp.com/docs/canvas/biden?text=${text}`, method: 'GET', encoding: null };
-request(requestSettings, function(error, response, body) {
-res.set('Content-Type', 'image/png');
-res.send(body)})})
-
-router.get('/oogway', async (req, res, next) => {
-var apikeyInput = req.query.apikey
-text = req.query.text 
-if (!text) return res.json({message: 'MASUKKAN TEXT' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-var requestSettings = {
-url: `https://myselfff.herokuapp.com/docs/canvas/oogway?text=${text}`, method: 'GET', encoding: null };
-request(requestSettings, function(error, response, body) {
-res.set('Content-Type', 'image/png');
-res.send(body)})})
-
-router.get('/gun', async (req, res, next) => {
-var apikeyInput = req.query.apikey
-url = req.query.url 
-if (!url) return res.json({message: 'MASUKKAN URL IMAGE' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-var requestSettings = {
-url: `https://myselfff.herokuapp.com/docs/canvas/gun?url=${url}`, method: 'GET', encoding: null };
-request(requestSettings, function(error, response, body) {
-res.set('Content-Type', 'image/png');
-res.send(body)})})
-
-router.get('/greyscale', async (req, res, next) => {
-var apikeyInput = req.query.apikey
-url = req.query.url 
-if (!url) return res.json({message: 'MASUKKAN URL IMAGE' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-var requestSettings = {
-url: `https://myselfff.herokuapp.com/docs/canvas/greyscale?url=${url}`, method: 'GET', encoding: null };
-request(requestSettings, function(error, response, body) {
-res.set('Content-Type', 'image/png');
-res.send(body)})})
-
-router.get('/ad', async (req, res, next) => {
-var apikeyInput = req.query.apikey
-url = req.query.url 
-if (!url) return res.json({message: 'MASUKKAN URL IMAGE' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-var requestSettings = {
-url: `https://myselfff.herokuapp.com/docs/canvas/ad?url=${url}`, method: 'GET', encoding: null };
-request(requestSettings, function(error, response, body) {
-res.set('Content-Type', 'image/png');
-res.send(body)})})
-
-router.get('/blur', async (req, res, next) => {
-var apikeyInput = req.query.apikey
-url = req.query.url 
-if (!url) return res.json({message: 'MASUKKAN URL IMAGE' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-var requestSettings = {
-url: `https://myselfff.herokuapp.com/docs/canvas/blur?url=${url}`, method: 'GET', encoding: null };
-request(requestSettings, function(error, response, body) {
-res.set('Content-Type', 'image/png');
-res.send(body)})})
-
-router.get('/uncover', async (req, res, next) => {
-var apikeyInput = req.query.apikey
-url = req.query.url 
-if (!url) return res.json({message: 'MASUKKAN URL IMAGE' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-var requestSettings = {
-url: `https://myselfff.herokuapp.com/docs/canvas/uncover?url=${url}`, method: 'GET', encoding: null };
-request(requestSettings, function(error, response, body) {
-res.set('Content-Type', 'image/png');
-res.send(body)})})
-
-router.get('/invert', async (req, res, next) => {
-var apikeyInput = req.query.apikey
-url = req.query.url 
-if (!url) return res.json({message: 'MASUKKAN URL IMAGE' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-var requestSettings = {
-url: `https://myselfff.herokuapp.com/docs/canvas/invert?url=${url}`, method: 'GET', encoding: null };
-request(requestSettings, function(error, response, body) {
-res.set('Content-Type', 'image/png');
-res.send(body)})})
-
-router.get('/alert', async (req, res, next) => {
-var apikeyInput = req.query.apikey
-url = req.query.url 
-if (!url) return res.json({message: 'MASUKKAN URL IMAGE' }) 
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-var requestSettings = {
-url: `https://myselfff.herokuapp.com/docs/canvas/alert?url=${url}`, method: 'GET', encoding: null };
-request(requestSettings, function(error, response, body) {
-res.set('Content-Type', 'image/png');
-res.send(body)})})
-
-router.get('/tebaklirik', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://api-yogipw.herokuapp.com/api/kuis/tebaklirik`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/tebakkimia', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://api-yogipw.herokuapp.com/api/kuis/tebakkimia`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/tebakjenaka', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://api-yogipw.herokuapp.com/api/kuis/tebakjenaka`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/tebakbendera', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://api-yogipw.herokuapp.com/api/kuis/tebakbendera`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/tebakgambar', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://api-yogipw.herokuapp.com/api/kuis/tebakgambar`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/caklontong', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://api-yogipw.herokuapp.com/api/kuis/caklontong`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/nsfw/neko', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://api.waifu.pics/nsfw/neko`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/nsfw/trap', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://api.waifu.pics/nsfw/trap`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/nsfw/waifu', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://api.waifu.pics/nsfw/waifu`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-router.get('/nsfw/blowjob', async (req, res, next) => {  
-var apikeyInput = req.query.apikey
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
-fetch(encodeURI(`https://api.waifu.pics/nsfw/blowjob`))
-.then(response => response.json())
-.then(data => { var result = data;
-res.json({ result })})})
-
-module.exports = router
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESTAPI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="user">
+        <img src="image.jpg" alt="">
+        <h3 class="name">MYRESTAPI</h3>
+        <p class="post">2019/2022</p>
+    </div>    
+</header>
+<div id="menu" class="fas fa-bars"></div>
+<section class="home" id="home">
+    <h3>WELCOME!</h3>
+    <h1>I'M <span>UNDEFINED</span></h1>
+    <p>hi selamat datang di my rest api, disini saya menyediakan beberapa fitur yang mungkin akan berguna untuk anda, silahkan gunakan rest ini sesuka kalian</p>        
+</section>
+<section class="contact" id="contact">
+<h1 class="heading"> <span>WALL</span>PAPER</h1>
+<li><a href="/api/wallml?apikey=YOUR_APIKEY"><button class="btn">wallml</button></a></li>
+    <li><a href="/api/wallrandom?apikey=YOUR_APIKEY"><button class="btn">wallrandom</button></a></li>
+    <li><a href="/api/wallcode?apikey=YOUR_APIKEY"><button class="btn">wallcode</button></a></li>
+    <li><a href="/api/wallneon?apikey=YOUR_APIKEY"><button class="btn">wallneon</button></a></li>
+    <li><a href="/api/wallpubg?apikey=YOUR_APIKEY"><button class="btn">wallpubg</button></a></li>
+<h1 class="heading"> <span>TEXT</span>PRO</h1>
+    <li><a href="/api/circuit?text=yourtext&apikey=YOUR_APIKEY"><button class="btn">circuit</button></a></li>
+    <li><a href="/api/sketch?text=yourtext&apikey=YOUR_APIKEY"><button class="btn">sketch</button></a></li>
+    <li><a href="/api/halloween?text=yourtext&apikey=YOUR_APIKEY"><button class="btn">halloween</button></a></li>
+    <li><a href="/api/rainbow?text=yourtext&apikey=YOUR_APIKEY"><button class="btn">rainbow</button></a></li>
+    <li><a href="/api/scfi?text=yourtext&apikey=YOUR_APIKEY"><button class="btn">scfi</button></a></li>
+    <li><a href="/api/blue?text=yourtext&apikey=YOUR_APIKEY"><button class="btn">blue</button></a></li>
+    <li><a href="/api/juice?text=yourtext&apikey=YOUR_APIKEY"><button class="btn">juice</button></a></li>
+    <li><a href="/api/purple?text=yourtext&apikey=YOUR_APIKEY"><button class="btn">purple</button></a></li>
+    <li><a href="/api/toxic?text=yourtext&apikey=YOUR_APIKEY"><button class="btn">toxic</button></a></li>
+    <li><a href="/api/peridot?text=yourtext&apikey=YOUR_APIKEY"><button class="btn">peridot</button></a></li>
+    <li><a href="/api/metal?text=yourtext&apikey=YOUR_APIKEY"><button class="btn">metal</button></a></li>
+    <li><a href="/api/realistic?text=yourtext&apikey=YOUR_APIKEY"><button class="btn">realistic</button></a></li>
+    <li><a href="/api/impressive?text=yourtext&apikey=YOUR_APIKEY"><button class="btn">impressive</button></a></li>
+    <li><a href="/api/cracked?text=yourtext&apikey=YOUR_APIKEY"><button class="btn">cracked</button></a></li>
+    <li><a href="/api/magma?text=yourtext&apikey=YOUR_APIKEY"><button class="btn">magma</button></a></li>
+    <li><a href="/api/thunder?text=yourtext&apikey=YOUR_APIKEY"><button class="btn">thunder</button></a></li>
+    <li><a href="/api/berry?text=yourtext&apikey=YOUR_APIKEY"><button class="btn">berry</button></a></li>
+    <li><a href="/api/transformer?text=yourtext&apikey=YOUR_APIKEY"><button class="btn">transformer</button></a></li>
+    <li><a href="/api/horror?text=yourtext&apikey=YOUR_APIKEY"><button class="btn">horror</button></a></li>
+    <li><a href="/api/metallic?text=yourtext&apikey=YOUR_APIKEY"><button class="btn">metallic</button></a></li>
+<h1 class="heading"> <span>RAN</span>DOM</h1>
+    <li><a href="/api/jumlahangka?text=82732&apikey=YOUR_APIKEY"><button class="btn">jumlahangka</button></a></li>
+    <li><a href="/api/jumlahhuruf?text=wwkaisv&apikey=YOUR_APIKEY"><button class="btn">jumlahhuruf</button></a></li>
+    <li><a href="/api/besarkecil?text=osjwux&apikey=YOUR_APIKEY"><button class="btn">besarkecil</button></a></li>
+    <li><a href="/api/resepmasakan?text=bakso&apikey=YOUR_APIKEY"><button class="btn">resepmasakan</button></a></li>
+    <li><a href="/api/katajago?text=cantik&apikey=YOUR_APIKEY"><button class="btn">katajago</button></a></li>
+    <li><a href="/api/artimimpi?text=ular&apikey=YOUR_APIKEY"><button class="btn">artimimpi</button></a></li>
+    <li><a href="/api/artinama?text=nayla&apikey=YOUR_APIKEY"><button class="btn">artinama</button></a></li>
+    <li><a href="/api/kapital?text=osiwmsp&apikey=YOUR_APIKEY"><button class="btn">kapital</button></a></li>
+    <li><a href="/api/halah?text=halo&apikey=YOUR_APIKEY"><button class="btn">halah</button></a></li>
+    <li><a href="/api/huluh?text=halo&apikey=YOUR_APIKEY"><button class="btn">huluh</button></a></li>
+    <li><a href="/api/heleh?text=hallo&apikey=YOUR_APIKEY"><button class="btn">heleh</button></a></li>
+    <li><a href="/api/bilangangka?text=9273202&apikey=YOUR_APIKEY"><button class="btn">bilangangka</button></a></li>
+    <li><a href="/api/balikangka?text=0274101&apikey=YOUR_APIKEY"><button class="btn">balikangka</button></a></li>
+    <li><a href="/api/balikhuruf?text=jaheoxlam&apikey=YOUR_APIKEY"><button class="btn">balikhuruf</button></a></li>
+<h1 class="heading"> <span>CAN</span>VAS</h1>
+    <li><a href="/api/sadcat?text=Udin&apikey=YOUR_APIKEY"><button class="btn">sadcat</button></a></li>
+    <li><a href="/api/facts?text=Udin&apikey=YOUR_APIKEY"><button class="btn">facts</button></a></li>
+    <li><a href="/api/pikachu?text=Udin&apikey=YOUR_APIKEY"><button class="btn">pikachu</button></a></li>
+    <li><a href="/api/biden?text=Udin&apikey=YOUR_APIKEY"><button class="btn">biden</button></a></li>
+    <li><a href="/api/oogway?text=Udin&apikey=YOUR_APIKEY"><button class="btn">oogway</button></a></li>
+    <li><a href="/api/gun?url=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&apikey=YOUR_APIKEY"><button class="btn">gun</button></a></li>
+    <li><a href="/api/alert?url=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&apikey=YOUR_APIKEY"><button class="btn">alert</button></a></li>
+    <li><a href="/api/greyscale?url=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&apikey=YOUR_APIKEY"><button class="btn">greyscale</button></a></li>
+    <li><a href="/api/ad?url=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&apikey=YOUR_APIKEY"><button class="btn">ad</button></a></li>
+    <li><a href="/api/blur?url=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&apikey=YOUR_APIKEY"><button class="btn">blur</button></a></li>
+    <li><a href="/api/uncover?url=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&apikey=YOUR_APIKEY"><button class="btn">uncover</button></a></li>
+    <li><a href="/api/invert?url=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&apikey=YOUR_APIKEY"><button class="btn">invert</button></a></li>
+<h1 class="heading"> <span>GAM</span>ES</h1>
+    <li><a href="/api/tebaklirik?apikey=YOUR_APIKEY"><button class="btn">tebaklirik</button></a></li>
+    <li><a href="/api/tebakkimia?apikey=YOUR_APIKEY"><button class="btn">tebakkimia</button></a></li>
+    <li><a href="/api/tebakjenaka?apikey=YOUR_APIKEY"><button class="btn">tebakjenaka</button></a></li>
+    <li><a href="/api/tebakbendera?apikey=YOUR_APIKEY"><button class="btn">tebakbendera</button></a></li>
+    <li><a href="/api/tebakgambar?apikey=YOUR_APIKEY"><button class="btn">tebakgambar</button></a></li>
+    <li><a href="/api/caklontong?apikey=YOUR_APIKEY"><button class="btn">caklontong</button></a></li>
+<h1 class="heading"> <span>NS</span>FW</h1>
+    <li><a href="/api/nsfw/neko?apikey=YOUR_APIKEY"><button class="btn">Neko</button></a></li>
+    <li><a href="/api/nsfw/waifu?apikey=YOUR_APIKEY"><button class="btn">Waifu</button></a></li>
+    <li><a href="/api/nsfw/trap?apikey=YOUR_APIKEY"><button class="btn">Trap</button></a></li>
+    <li><a href="/api/nsfw/blowjob?apikey=YOUR_APIKEY"><button class="btn">Blowjob</button></a></li>
+    
+
+
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
