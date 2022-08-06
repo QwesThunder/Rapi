@@ -595,4 +595,28 @@ fetch(encodeURI(`https://api.waifu.pics/nsfw/neko`))
 .then(data => { var result = data;
 res.json({ result })})})
 
+router.get('/nsfw/trap', async (req, res, next) => {  
+var apikeyInput = req.query.apikey
+if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
+fetch(encodeURI(`https://api.waifu.pics/nsfw/trap`))
+.then(response => response.json())
+.then(data => { var result = data;
+res.json({ result })})})
+
+router.get('/nsfw/waifu', async (req, res, next) => {  
+var apikeyInput = req.query.apikey
+if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
+fetch(encodeURI(`https://api.waifu.pics/nsfw/waifu`))
+.then(response => response.json())
+.then(data => { var result = data;
+res.json({ result })})})
+
+router.get('/nsfw/blowjob', async (req, res, next) => {  
+var apikeyInput = req.query.apikey
+if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
+fetch(encodeURI(`https://api.waifu.pics/nsfw/blowjob`))
+.then(response => response.json())
+.then(data => { var result = data;
+res.json({ result })})})
+
 module.exports = router
