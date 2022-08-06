@@ -587,5 +587,12 @@ fetch(encodeURI(`https://api-yogipw.herokuapp.com/api/kuis/caklontong`))
 .then(data => { var result = data;
 res.json({ result })})})
 
+router.get('/wallanim', async (req, res, next) => {  
+var apikeyInput = req.query.apikey
+if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
+fetch(encodeURI(`https://www.loliapi.com/acg/pe`))
+.then(response => response.json())
+.then(data => { var result = data;
+res.json({ result })})})
 
 module.exports = router
