@@ -1,10 +1,9 @@
-
 __path = process.cwd()
 
 var express = require('express');
 
 // MASUKKAN/GANTI APIKEY 
-apikey = "QwesHK2005", "Z"
+apikey = "QwesHK2005", "ZasXCar"
 // 
 
 var fetch = require('node-fetch');
@@ -616,6 +615,38 @@ router.get('/nsfw/blowjob', async (req, res, next) => {
 var apikeyInput = req.query.apikey
 if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
 fetch(encodeURI(`https://api.waifu.pics/nsfw/blowjob`))
+.then(response => response.json())
+.then(data => { var result = data;
+res.json({ result })})})
+
+router.get('/sfw/neko', async (req, res, next) => {  
+var apikeyInput = req.query.apikey
+if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
+fetch(encodeURI(`https://api.waifu.pics/sfw/neko`))
+.then(response => response.json())
+.then(data => { var result = data;
+res.json({ result })})})
+
+router.get('/sfw/waifu', async (req, res, next) => {  
+var apikeyInput = req.query.apikey
+if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
+fetch(encodeURI(`https://api.waifu.pics/sfw/waifu`))
+.then(response => response.json())
+.then(data => { var result = data;
+res.json({ result })})})
+
+router.get('/sfw/shinobu', async (req, res, next) => {  
+var apikeyInput = req.query.apikey
+if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
+fetch(encodeURI(`https://api.waifu.pics/sfw/shinobu`))
+.then(response => response.json())
+.then(data => { var result = data;
+res.json({ result })})})
+
+router.get('/sfw/megumin', async (req, res, next) => {  
+var apikeyInput = req.query.apikey
+if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
+fetch(encodeURI(`https://api.waifu.pics/sfw/megumin`))
 .then(response => response.json())
 .then(data => { var result = data;
 res.json({ result })})})
